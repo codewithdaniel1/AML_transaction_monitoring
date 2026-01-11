@@ -52,6 +52,52 @@ Stage 2 is divided into three sub steps.
 
 ---
 
+## End to End Monitoring Flow
+
+```text
+Raw Transactions
+    |
+    v
+Transaction Feature Engineering
+    - Rolling counts and amounts
+    - Velocity and frequency metrics
+    - Cross border and cash indicators
+    |
+    v
+Stage 1: Scenario Based Monitoring
+    - High transaction velocity
+    - Cross border activity bursts
+    - Cash intensive behavior
+    - Rapid transaction patterns
+    |
+    v
+Alert Generation
+    - Alerts created at account day level
+    |
+    v
+Stage 2: Alert Enrichment
+    - Transaction aggregation
+    - Alert labeling using laundering outcomes
+    - Typology attribution for validation
+    |
+    v
+Stage 2: Alert Risk Scoring
+    - Interpretable baseline model
+    - Gradient boosted ranking model
+    |
+    v
+Ranked Alerts
+    - Risk scores
+    - Investigator reason codes
+    |
+    v
+Investigator Review and Decisioning
+```
+This flow illustrates how scenario based detection and model driven prioritization work together to support risk based AML investigations.
+
+
+---
+
 ## Dataset Access
 The dataset is not included in this repository due to GitHub file size limits.
 It can be downloaded from Kaggle and placed in the `data/` directory as `saml_d.csv`.
@@ -100,6 +146,19 @@ risk_based_aml_monitoring/
 └── data/
     └── saml_d.csv
 ```
+---
+
+## Results Summary
+
+The two stage framework demonstrates strong alert prioritization performance in a highly imbalanced AML setting.
+
+Key outcomes:
+- Alert positive rate after scenario tuning: ~1 percent
+- Gradient boosted model outperforms baseline logistic regression in ranking risk
+- Meaningful concentration of true positives within the top reviewed alerts
+- Investigator capacity simulation shows improved yield per day compared to random review
+
+These results illustrate how combining scenario based monitoring with model driven prioritization can significantly improve investigative efficiency.
 
 ---
 
