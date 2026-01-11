@@ -52,8 +52,9 @@ Stage 2 is divided into three sub steps.
 
 ---
 
-## Dataset
-The project uses a synthetic AML transaction dataset with embedded laundering behaviors and typology labels. The data is used strictly for research and demonstration purposes.
+## Dataset Access
+The dataset is not included in this repository due to GitHub file size limits.
+It can be downloaded from Kaggle and placed in the `data/` directory as `saml_d.csv`.
 
 Key fields include:
 - Sender and receiver account identifiers
